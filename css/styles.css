@@ -17,9 +17,18 @@ body{
   top: 0;
   z-index: 1000;
 }
-
+.variedades{
+  display: flex;
+  flex-wrap: wrap;
+}
 article{
   position: relative;
+}
+section.variedades article h2.producto{
+  padding: 2.5%;
+}
+section.variedades article h1.precio{
+  padding-left: 2.5%;
 }
 .oferta{
   position: absolute;
@@ -32,28 +41,14 @@ article{
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
-
-.variedades{
-  display: flex;
-  flex-wrap: wrap;
-}
-section.variedades article h2.producto{
-  padding: 2.5%;
-}
-section.variedades article h1.precio{
-  padding-left: 2.5%;
-}
-
 .btagregar{
   width: 35%;
   height: 40px;
-  /* margin-left: 2.5%; */
   border: none; 
   outline: solid red thin;  
   color: red;
   border-radius: 6px;
-  margin: 2.5%;
-  
+  margin: 2.5%; 
 }
 section.variedades article button:hover{
   cursor: pointer;
@@ -61,13 +56,9 @@ section.variedades article button:hover{
   background-color: #f13413;
   transform: scale(1.1);
   transition: all 200ms ease-in
-  /* box-shadow: 0px 0px 15px hwb(0 1% 5% / 0.959); */
-  /*efecto de transición y transformación*/
-
 }
 .descrip{
   padding: 4.5%;
-
 }
 @keyframes oferton {
   from{
@@ -80,33 +71,29 @@ section.variedades article button:hover{
 .titulo{
   color: rgb(12, 12, 12);
   text-align: center;
-  font-size: 2rem;  /*3 * 16px === 48px*/
+  font-size: 2rem;
   font-family: Arial, Helvetica, sans-serif;
-  /*=== Medidas Absolutas: px  
-        Medidas Relativas: % em rem vh vw
-        1rem === 16px 
-  ===*/
-
 }
+/*=== Aplicando CSS para una Dispositivos Moviles===*/
+/* Ocultar descripción en móviles  */
 @media (max-width: 766px) {
   .variedades article p.descrip {
     display: none;
   }
 }
-/*https://www.w3schools.com/css/css_rwd_mediaqueries.asp*/
 /*=== Aplicando CSS para una Tablet===*/
 @media (min-width:768px){
   .titulo{
     color: rgb(12, 12, 12);
     font-size: 3rem;
   }
-  .imagen{
-    display: block;
-  }
   .variedades{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+  }
+  .imgproducto{
+    height: 200px;
   }
 }
 /*=== Aplicando CSS para un Desktops===*/
@@ -116,8 +103,10 @@ section.variedades article button:hover{
     font-size: 4rem;
   }
   .variedades{
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     grid-template-columns: repeat(4,1fr);
+  }
+  .imgproducto{  
+    height: 200px;
   }
 }
 
