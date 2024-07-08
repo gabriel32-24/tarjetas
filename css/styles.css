@@ -93,7 +93,7 @@ section.variedades article button:hover{
     gap: 10px;
   }
   .imgproducto{
-    height: 200px;
+    height: 240px;
   }
 }
 /*=== Aplicando CSS para un Desktops===*/
@@ -106,7 +106,7 @@ section.variedades article button:hover{
     grid-template-columns: repeat(4,1fr);
   }
   .imgproducto{  
-    height: 200px;
+    height: 240px;
   }
 }
 
