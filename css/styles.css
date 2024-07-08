@@ -56,6 +56,7 @@ section.variedades article h1.precio{
   
 }
 section.variedades article button:hover{
+  cursor: pointer;
   color:#f8f0ee;
   background-color: #f13413;
   transform: scale(1.1);
